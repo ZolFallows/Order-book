@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { OrderProvider } from './context/OrderContext'
-import App from './components/App/App';
+import App from './pages/App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 
-ReactDOM.render(
-    <OrderProvider>
-        <App />
-    </OrderProvider>,
+ReactDOM.render(<App />,
     document.getElementById('root')
 );
 

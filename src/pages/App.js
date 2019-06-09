@@ -1,11 +1,11 @@
 import React from 'react';
-import BookOrder from '../../pages/BookOrder'
+import Order from '../components/Order/index'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <BookOrder />
+      <Order />
     </div>
   );
 }
