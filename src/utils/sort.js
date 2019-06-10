@@ -10,10 +10,12 @@ const mergeBids = (left, right, array) => {
             array[outputIndex++] = right[rightIndex++]; 
         }
     }
-    for (let i = leftIndex; i < left.length; i++) 
+    for (let i = leftIndex; i < left.length; i++){
         array[outputIndex++] = left[i];
-    for (let i = rightIndex; i < right.length; i++) 
+    }
+    for (let i = rightIndex; i < right.length; i++){
         array[outputIndex++] = right[i]; 
+    } 
     return array; 
 }
 
@@ -29,10 +31,12 @@ const mergeAsks = (left, right, array) => {
             array[outputIndex++] = right[rightIndex++]; 
         }
     }
-    for (let i = leftIndex; i < left.length; i++) 
+    for (let i = leftIndex; i < left.length; i++){
         array[outputIndex++] = left[i];
-    for (let i = rightIndex; i < right.length; i++) 
+    }
+    for (let i = rightIndex; i < right.length; i++){
         array[outputIndex++] = right[i]; 
+    } 
     return array; 
 }
 
