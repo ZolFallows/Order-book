@@ -8,8 +8,8 @@ import {
 const OrderStream = ({ ordersData, currencyPair }) => {
   if (ordersData) {
     const { bids, asks } = ordersData;
-    sortBids(bids);
-    sortAsks(asks);
+    sortBids(bids); // sorted by descending price
+    sortAsks(asks); // sorted by ascending price
     const coin = getCoin(currencyPair);
     const currency = getCurrency(currencyPair);
     const market = bids.map(([bidCoinAmount, bidPrice], index) => {

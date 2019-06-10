@@ -28,12 +28,13 @@ export default class Order extends Component {
       book: "",
       error: null
     });
-    connectSocket(this.onMessageHandler);
+    connectSocket(this.onMessageHandler); 
   }
 
   onMessageHandler = ev => {
     const { event, data } = ev && ev.data ? JSON.parse(ev.data) : {};
     if (event === DATA_EVENT) {
+      // add new message to state 
       this.setState({
         ordersData: data
       });
@@ -44,10 +45,10 @@ export default class Order extends Component {
     const currencyPairSubscribe = e.target.value;
     const currencyPairUnsubscribe = this.state.book;
     if (currencyPairUnsubscribe) {
-      unsubscribe(currencyPairUnsubscribe);
+      unsubscribe(currencyPairUnsubscribe); // unsubscribe previous channel if exist 
     }
     if (currencyPairSubscribe === SELECT_CURRENCY) {
-      return this.setState({ ordersData: null });
+      return this.setState({ ordersData: null }); // if current currency pair is 'select currency', reset orderData
     }
     subscribe(currencyPairSubscribe);
     this.setState({ book: currencyPairSubscribe }); // make sure subscribe is successful before updating state

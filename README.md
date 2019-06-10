@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Summary 
+
+* A real time sreaming of data was implemented with Websocket API v2.
+* Channels can be subscribed/unsubscribed by selecting options from the drop down list.
+* Once a channel is subcribed, recieving data stored in local state, however this can be improved through use of a state management library, such as Redux or Context API.
+* For sorting of data, merge sort algorithm was used to improve run time.  
+
 ## Available Scripts
 
 In the project directory, you can run:
