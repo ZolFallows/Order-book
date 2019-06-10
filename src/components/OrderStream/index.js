@@ -12,8 +12,8 @@ const OrderStream = ({ ordersData, currencyPair }) => {
     sortAsks(asks); // sorted by ascending price
     const coin = getCoin(currencyPair);
     const currency = getCurrency(currencyPair);
-    const market = bids.map(([bidCoinAmount, bidPrice], index) => {
-      const [askCoinAmount, askPrice] = asks[index];
+    const market = bids.map(([bidPrice, bidCoinAmount], index) => {
+      const [askPrice, askCoinAmount] = asks[index];
       const bid = `${bidCoinAmount} ${coin} @ ${bidPrice} ${currency}`;
       const ask = `${askCoinAmount} ${coin} @  ${askPrice} ${currency}`;
       return (
